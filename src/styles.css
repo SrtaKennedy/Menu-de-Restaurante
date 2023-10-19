@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Roboto: 'Roboto', sans-serif;
+    --Sans: 'Open Sans', sans-serif;
+    --espacamento: 0.25rem;
+    --transition: all 0.3s linear;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    --cor1: #3AA6B9;
+    --cor2: #fff4da;
+    --cor3: #D8D8D8;
+    --cor4: #FFC95F;
+    --cor5: #fffad76b;
+    --text-shadow: 4px 2px 1px rgba(0, 0, 0, 0.11);
+}
+
+body {
+    font-family: var(--Roboto);
+    background: var(--cor5);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+img:not(.logo) {
+    width: 100%;
+} 
+
+img {
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    letter-spacing: var(--espacamento);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--Sans);
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3rem;
+} 
+
+h2 {
+    font-size: 2rem;
+} 
+
+h3 {
+    font-size: 1.25rem;
+} 
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    } 
+    
+    h2 {
+        font-size: 2.5rem;
+    } 
+    
+    h3 {
+        font-size: 1.75rem;
+    } 
+    
+    h4 {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+    
+    h1, h2, h3, h4 {
+        line-height: 1;
+    }
+}
+
+/* Global */
+
+.btn {
+    text-transform: uppercase;
+    background: transparent;
+    padding: 0.375rem 0.75rem;
+    letter-spacing: var(--espacamento);
+    display: inline-block;
+    transition: var(--transition);
+    font-family: 0.875rem;
+    border: 2px solid black;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius);
+}
+
+.btn:hover {
+    color: white;
+    background-color: black;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+main {
+    min-width: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.menu {
+    padding: 5rem 0;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.underline {
+    width: 5rem;
+    height: 0.25rem;
+    background: var(--cor1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-container {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-btn {
+    background: transparent;
+    border-color: var(--cor1);
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin: 0 0.5rem;
+    letter-spacing: 1px;
+    border-radius: var(--radius);
+    padding: 0.375rem 0.75rem;
+    color: var(--cor1);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    background: var(--cor1);
+    color: var(--cor2);
+}
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    gap: 3rem 2rem;
+    justify-content: center;
+}
+
+.menu-item {
+    display: grid;
+    gap: 1rem 2rem;
+    max-width: 25rem;
+}
+
+.photo {
+    object-fit: cover;
+    height: 200px;
+    border: 0.15rem solid var(--cor1);
+    border-radius: var(--radius);
+}
+
+.item-info header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px dotted var(--cor3);
+}
+
+.item-info h4 {
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    color: var(--cor4);
+    text-shadow: var(--text-shadow);
+}
+
+.item-text {
+    margin-bottom: 0;
+    padding-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .menu-item {
+        grid-template-columns: 225px 1fr;
+        gap: 0 1.25rem;
+        max-width: 40rem;
+    }
+    
+    .photo {
+        height: 175px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section-center {
+        width: 95vw;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .photo {
+        height: 150px;
+    }
+}
